@@ -3,7 +3,8 @@
 //Discuss an algorithm to traverse a tree, depth first.
 //
 //ANSWER:
-//The depth-first search is an algorithm for traversing or searching tree or graph data structures. Starting from the root and exploring as far as 
+//The depth-first search is an algorithm for traversing or searching tree or graph data structures. 
+//Starting from the root and exploring as far as 
 //possible along each branch before backtracking. There are three different kinds of depth first traversals:
 //Pre-order: Where it visits each node before visiting any of its children
 //In-order: Where it visits each node after visiting its left child, but before visiting its right child
