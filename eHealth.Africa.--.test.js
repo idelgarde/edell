@@ -32,15 +32,15 @@ function find_char_nn(string1, string2){
 }
 
 
-function find_char_n(string1, string2){
-	result  = "";
-
-	for(i = 0; i<string1.length; i++){
-		if ( string2.indexOf(string1[i]) > -1 ) {
-			result  += string1[i];
+function find_char_n(str1, str2) {
+	set = new Set(str2.split(''));
+	ret = '';
+	for (c of str1) {
+		if (set.has(c)){
+			ret = ret.concat(c);
 		}
 	}
-	return result;
+	return ret;
 }
 
 
