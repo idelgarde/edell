@@ -32,16 +32,17 @@ function find_char_nn(string1, string2){
 }
 
 
-function find_char_n(str1, str2) {
-	set = new Set(str2.split(''));
+function find_char_n(string1, string2) {
+	set = new Set(string2.split(''));
 	ret = '';
-	for (c of str1) {
+	for (c of string1) {
 		if (set.has(c)){
 			ret = ret.concat(c);
 		}
 	}
 	return ret;
 }
+
 
 
 //ROTATING AN ARRAY
