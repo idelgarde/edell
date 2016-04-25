@@ -1,0 +1,48 @@
+
+int a1=3;
+int a2=5;
+int a3=7;
+int a4=9;
+char buffer;
+
+void setup() {
+  Serial.begin(9600);       // initialization UART
+  pinMode(a1, OUTPUT);    // additional channel
+  pinMode(a2, OUTPUT);      // output for motor rotation
+  pinMode(a3, OUTPUT);      // output for motor rotation
+  pinMode(a4, OUTPUT);
+
+  Serial.println("comecou");
+}
+
+
+void loop() {
+  if(Serial.available()){
+    buffer=Serial.read();
+    switch(buffer){
+    case 'a':
+      digitalWrite(a1,HIGH);
+      digitalWrite(a2,LOW);
+      break;
+    case 'd':
+      digitalWrite(a2,HIGH);
+      digitalWrite(a1,LOW);
+      break;
+    case 'w':
+      digitalWrite(a3,LOW);
+      digitalWrite(a4,HIGH);
+      break;
+    case 's':
+      digitalWrite(a4,LOW);
+      digitalWrite(a3,HIGH);
+      break;
+    case 'p':
+      digitalWrite(a4,LOW);
+      digitalWrite(a3,LOW);
+      digitalWrite(a1,LOW);
+      digitalWrite(a2,LOW);
+      break;
+
+    }
+  }
+}
